@@ -60,6 +60,3 @@ db/*.db
 *-dist/
 next-service-dist/
 mini-services-dist/
-
-# Scripts directory
-.zscripts/
