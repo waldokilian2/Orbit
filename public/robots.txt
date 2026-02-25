@@ -1,0 +1,3 @@
+# This is a private services dashboard - disallow all bots
+User-agent: *
+Disallow: /

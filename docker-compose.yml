@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  services-hub:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: services-hub
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount the config file so you can edit it without rebuilding
+      - ./config/services.json:/app/config/services.json:ro
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/config"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s

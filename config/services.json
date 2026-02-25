@@ -1,0 +1,202 @@
+{
+  "site": {
+    "title": "Orbit",
+    "subtitle": "Welcome to my self-hosted services",
+    "footer": "Made with ❤️ by Waldo Kilian",
+    "logo": ""
+  },
+  "quickLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com"
+    },
+    {
+      "name": "Documentation",
+      "url": "https://docs.example.com"
+    },
+    {
+      "name": "Status",
+      "url": "https://status.example.com"
+    }
+  ],
+  "groups": [
+    {
+      "name": "Media",
+      "icon": "🎬",
+      "services": [
+        {
+          "id": "plex",
+          "name": "Plex",
+          "description": "Media server for movies and TV shows",
+          "url": "http://localhost:32400",
+          "icon": "🎬",
+          "color": "#E5A00D"
+        },
+        {
+          "id": "jellyfin",
+          "name": "Jellyfin",
+          "description": "Free software media system",
+          "url": "http://localhost:8096",
+          "icon": "📺",
+          "color": "#00A4DC"
+        },
+        {
+          "id": "sonarr",
+          "name": "Sonarr",
+          "description": "Smart TV show management",
+          "url": "http://localhost:8989",
+          "icon": "📺",
+          "color": "#3C78A8"
+        },
+        {
+          "id": "radarr",
+          "name": "Radarr",
+          "description": "Movie collection manager",
+          "url": "http://localhost:7878",
+          "icon": "🎥",
+          "color": "#734B8E"
+        }
+      ]
+    },
+    {
+      "name": "Productivity",
+      "icon": "⚡",
+      "services": [
+        {
+          "id": "nextcloud",
+          "name": "Nextcloud",
+          "description": "File sync and share platform",
+          "url": "http://localhost:8080",
+          "icon": "☁️",
+          "color": "#0082C9"
+        },
+        {
+          "id": "paperless",
+          "name": "Paperless-ngx",
+          "description": "Document management system",
+          "url": "http://localhost:8000",
+          "icon": "📄",
+          "color": "#17541F"
+        },
+        {
+          "id": "immich",
+          "name": "Immich",
+          "description": "Photo and video backup solution",
+          "url": "http://localhost:2283",
+          "icon": "📷",
+          "color": "#4F46E5"
+        }
+      ]
+    },
+    {
+      "name": "Development",
+      "icon": "💻",
+      "services": [
+        {
+          "id": "gitea",
+          "name": "Gitea",
+          "description": "Lightweight Git service",
+          "url": "http://localhost:3000",
+          "icon": "🐙",
+          "color": "#609926"
+        },
+        {
+          "id": "portainer",
+          "name": "Portainer",
+          "description": "Container management platform",
+          "url": "http://localhost:9000",
+          "icon": "🐳",
+          "color": "#13BEF9"
+        },
+        {
+          "id": "code-server",
+          "name": "VS Code Server",
+          "description": "Browser-based VS Code",
+          "url": "http://localhost:8443",
+          "icon": "💻",
+          "color": "#007ACC"
+        }
+      ]
+    },
+    {
+      "name": "Monitoring",
+      "icon": "📊",
+      "services": [
+        {
+          "id": "grafana",
+          "name": "Grafana",
+          "description": "Analytics and monitoring platform",
+          "url": "http://localhost:3001",
+          "icon": "📈",
+          "color": "#F46800"
+        },
+        {
+          "id": "prometheus",
+          "name": "Prometheus",
+          "description": "Monitoring and alerting toolkit",
+          "url": "http://localhost:9090",
+          "icon": "🔥",
+          "color": "#E6522C"
+        },
+        {
+          "id": "uptime-kuma",
+          "name": "Uptime Kuma",
+          "description": "Self-hosted monitoring tool",
+          "url": "http://localhost:3002",
+          "icon": "💚",
+          "color": "#5CDD8B"
+        }
+      ]
+    },
+    {
+      "name": "Home Automation",
+      "icon": "🏠",
+      "services": [
+        {
+          "id": "homeassistant",
+          "name": "Home Assistant",
+          "description": "Open source home automation",
+          "url": "http://localhost:8123",
+          "icon": "🏠",
+          "color": "#41BDF5"
+        },
+        {
+          "id": "mqtt",
+          "name": "MQTT Broker",
+          "description": "Message broker for IoT devices",
+          "url": "http://localhost:1883",
+          "icon": "📡",
+          "color": "#660066"
+        }
+      ]
+    },
+    {
+      "name": "Downloads",
+      "icon": "⬇️",
+      "services": [
+        {
+          "id": "transmission",
+          "name": "Transmission",
+          "description": "BitTorrent client",
+          "url": "http://localhost:9091",
+          "icon": "📥",
+          "color": "#C8E6C9"
+        },
+        {
+          "id": "sabnzbd",
+          "name": "SABnzbd",
+          "description": "Newsreader for Usenet",
+          "url": "http://localhost:8085",
+          "icon": "📰",
+          "color": "#FFA726"
+        }
+      ]
+    }
+  ],
+  "favorites": [
+    "plex",
+    "nextcloud",
+    "portainer",
+    "grafana"
+  ]
+}
