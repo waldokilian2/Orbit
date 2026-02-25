@@ -1,6 +1,6 @@
 # 🌌 Orbit
 
-A beautiful, configurable self-hosted services dashboard with Apple-inspired liquid glass design. Built with Next.js 15, TypeScript, and Tailwind CSS.
+A beautiful, configurable self-hosted services dashboard with a glass design. Built with Next.js 15, TypeScript, and Tailwind CSS.
 
 ## ✨ Features
 
