@@ -27,7 +27,7 @@ Simply use the provided [`docker-compose.yml`](docker-compose.yml) file to get s
 
 Access your dashboard at `http://localhost:3000`
 
-**Note:** You may want to customize [`config/services.json`](config/services.json) before starting, but the default configuration works out of the box.
+**Note:** You can customize the configuration either by editing the mounted [`config/services.json`](config/services.json) file directly or through the UI settings editor.
 
 #### Pulling from Registry
 
