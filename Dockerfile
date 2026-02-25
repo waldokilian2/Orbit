@@ -33,9 +33,9 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
-# Create config directory and copy default config
-RUN mkdir -p /app/config
-COPY config/services.json /app/config/services.json.default
+# Create config directory and copy default config to a safe location
+RUN mkdir -p /app/config /app/default-config
+COPY config/services.json /app/default-config/services.json
 COPY docker-entrypoint.sh /app/docker-entrypoint.sh
 RUN chmod +x /app/docker-entrypoint.sh
 
