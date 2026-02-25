@@ -1,5 +1,7 @@
 # 🌌 Orbit
 
+![Orbit Dashboard](public/Screenshot.png)
+
 A beautiful, configurable self-hosted services dashboard with a glass design. Built with Next.js 15, TypeScript, and Tailwind CSS.
 
 ## ✨ Features
@@ -17,6 +19,40 @@ A beautiful, configurable self-hosted services dashboard with a glass design. Bu
 
 ## 🚀 Quick Start
 
+### Docker Deployment (Recommended)
+
+#### Using Docker Compose
+
+1. Edit [`config/services.json`](config/services.json) with your services
+2. Run `docker-compose up -d`
+3. Access your dashboard at `http://localhost:3000`
+
+#### Pulling from Registry
+
+To pull the Docker image from GitHub Container Registry:
+
+```bash
+# Pull the latest version
+docker pull ghcr.io/waldokilian2/orbit:latest
+
+# Pull a specific version (e.g., 0.3.0)
+docker pull ghcr.io/waldokilian2/orbit:0.3.0
+```
+
+**Package Information:**
+- **Name**: `orbit`
+- **Version**: `0.3.0`
+- **Registry**: `ghcr.io/waldokilian2/orbit`
+
+After pulling, run the container:
+
+```bash
+docker run -d \
+  --name orbit-dashboard \
+  -p 3000:3000 \
+  ghcr.io/waldokilian2/orbit:0.3.0
+```
+
 ### Development Mode
 
 ```bash
@@ -29,20 +65,22 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to see your dashboard.
 
-### Docker Deployment
-
-```bash
-# Build and run with Docker Compose
-docker-compose up -d
-
-# Or build manually
-docker build -t services-hub .
-docker run -p 3000:3000 -v ./config/services.json:/app/config/services.json:ro services-hub
-```
-
 ## ⚙️ Configuration
 
-All configuration is done via the `config/services.json` file. Here's the structure:
+You can configure your dashboard in two ways:
+
+### UI Editor (Recommended)
+
+Click the **Settings** button (⚙️) in the header to open the configuration editor. This allows you to:
+
+- Edit the configuration directly in the browser
+- See real-time JSON validation
+- Access built-in help documentation
+- Save changes instantly with Ctrl+S
+
+### Manual Configuration
+
+Alternatively, edit the [`config/services.json`](config/services.json) file directly. Here's the structure:
 
 ```json
 {
@@ -113,31 +151,16 @@ All configuration is done via the `config/services.json` file. Here's the struct
 #### Favorites
 Array of service IDs to display in the favorites section at the top.
 
-## 🌙 Dark/Light Mode
-
-- Click the toggle in the header to switch between dark and light themes
-- Your preference is automatically saved to localStorage
-- Theme persists across sessions and page refreshes
-- Respects system preference by default (falls back to dark mode)
-
-## 🐳 Docker Deployment
-
-### Using Docker Compose (Recommended)
-
-1. Edit `config/services.json` with your services
-2. Run `docker-compose up -d`
-3. Access your dashboard at `http://localhost:3000`
-
-### Volume Mounts
-
-The configuration file is mounted as a volume, so you can edit it without rebuilding:
-
-```yaml
-volumes:
-  - ./config/services.json:/app/config/services.json:ro
-```
-
 ## 🎨 Customization
+
+### Logo Configuration
+
+The `logo` field in the `site` section allows you to add a custom logo to your dashboard header.
+
+#### How It Works
+
+- **Empty string** (`""`): Shows a default gradient icon with a house emoji (🏠)
+- **Custom URL**: Displays your custom logo image in the header
 
 ### Adding Custom Icons
 
@@ -159,11 +182,20 @@ Each service can have a custom accent color that affects the card styling:
 }
 ```
 
+## 🌙 Dark/Light Mode
+
+- Click the toggle in the header to switch between dark and light themes
+- Your preference is automatically saved to localStorage
+- Theme persists across sessions and page refreshes
+- Respects system preference by default (falls back to dark mode)
+
 ## 📁 Project Structure
 
 ```
 ├── config/
 │   └── services.json      # Main configuration file
+├── public/
+│   └── Screenshot.png     # Dashboard screenshot
 ├── src/
 │   ├── app/
 │   │   ├── page.tsx       # Main dashboard page
