@@ -1,21 +1,11 @@
 version: '3.8'
 
 services:
-  services-hub:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: services-hub
+  orbit:
+    image: ghcr.io/waldokilian2/orbit:latest
+    container_name: orbit-dashboard
     restart: unless-stopped
     ports:
       - "3000:3000"
     volumes:
-      # Mount the config file so you can edit it without rebuilding
-      # Maps the specific services.json file to prevent nested directory issues
-      - ./config/services.json:/app/config/services.json:rw
-    healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/config"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 10s
+      - ./config/:/app/config/:rw

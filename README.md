@@ -23,9 +23,11 @@ A beautiful, configurable self-hosted services dashboard with a glass design. Bu
 
 #### Using Docker Compose
 
-1. Edit [`config/services.json`](config/services.json) with your services
-2. Run `docker-compose up -d`
-3. Access your dashboard at `http://localhost:3000`
+Simply use the provided [`docker-compose.yml`](docker-compose.yml) file to get started. It pulls the latest Orbit image from `ghcr.io/waldokilian2/orbit:latest`, mounts your configuration directory, and exposes the dashboard on port 3000.
+
+Access your dashboard at `http://localhost:3000`
+
+**Note:** You may want to customize [`config/services.json`](config/services.json) before starting, but the default configuration works out of the box.
 
 #### Pulling from Registry
 
