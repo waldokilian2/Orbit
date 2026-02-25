@@ -1,4 +1,4 @@
-# 🌌 Orbit
+# <img src="public/logo.svg" width="32" height="32" alt="Orbit Logo" style="vertical-align: middle; margin-right: 8px;"> Orbit
 
 ![Orbit Dashboard](public/Screenshot.png)
 
