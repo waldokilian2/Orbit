@@ -35,13 +35,13 @@ To pull the Docker image from GitHub Container Registry:
 # Pull the latest version
 docker pull ghcr.io/waldokilian2/orbit:latest
 
-# Pull a specific version (e.g., 0.3.0)
-docker pull ghcr.io/waldokilian2/orbit:0.3.0
+# Pull a specific version (e.g., 0.5.0)
+docker pull ghcr.io/waldokilian2/orbit:0.5.0
 ```
 
 **Package Information:**
 - **Name**: `orbit`
-- **Version**: `0.3.0`
+- **Version**: `0.5.0`
 - **Registry**: `ghcr.io/waldokilian2/orbit`
 
 After pulling, run the container:
@@ -50,8 +50,11 @@ After pulling, run the container:
 docker run -d \
   --name orbit-dashboard \
   -p 3000:3000 \
-  ghcr.io/waldokilian2/orbit:0.3.0
+  -v ./config:/app/config \
+  ghcr.io/waldokilian2/orbit:0.5.0
 ```
+
+**Important:** Mount the `./config` directory to persist your configuration across container updates. Without this volume, your configuration will be reset to defaults when you update the Docker image.
 
 ### Development Mode
 

@@ -35,7 +35,9 @@ COPY --from=builder /app/.next/static ./.next/static
 
 # Create config directory and copy default config
 RUN mkdir -p /app/config
-COPY config/services.json /app/config/services.json
+COPY config/services.json /app/config/services.json.default
+COPY docker-entrypoint.sh /app/docker-entrypoint.sh
+RUN chmod +x /app/docker-entrypoint.sh
 
 # Set ownership
 RUN chown -R nextjs:nodejs /app
@@ -51,4 +53,4 @@ ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
 # Start the application
-CMD ["node", "server.js"]
+CMD ["/app/docker-entrypoint.sh"]
