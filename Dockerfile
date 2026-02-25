@@ -1,22 +1,19 @@
 # Build stage
 FROM node:20-alpine AS builder
 
-# Install bun
-RUN npm install -g bun
-
 WORKDIR /app
 
 # Copy package files
-COPY package.json bun.lock ./
+COPY package.json package-lock.json ./
 
 # Install dependencies
-RUN bun install --frozen-lockfile
+RUN npm ci
 
 # Copy source files
 COPY . .
 
 # Build the application
-RUN bun run build
+RUN npm run build
 
 # Production stage
 FROM node:20-alpine AS runner

@@ -21,10 +21,10 @@ A beautiful, configurable self-hosted services dashboard with a glass design. Bu
 
 ```bash
 # Install dependencies
-bun install
+npm install
 
 # Start development server
-bun run dev
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to see your dashboard.
@@ -190,16 +190,16 @@ Each service can have a custom accent color that affects the card styling:
 
 ```bash
 # Install dependencies
-bun install
+npm install
 
 # Run development server
-bun run dev
+npm run dev
 
 # Run linter
-bun run lint
+npm run lint
 
 # Build for production
-bun run build
+npm run build
 ```
 
 ## 📝 Tips
