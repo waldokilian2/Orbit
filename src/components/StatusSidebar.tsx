@@ -9,11 +9,14 @@ interface StatusSidebarProps {
 export function StatusSidebar({ statusPageUrl }: StatusSidebarProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [iframeLoaded, setIframeLoaded] = useState(false)
 
   const hasUrl = Boolean(statusPageUrl && statusPageUrl.trim().length > 0)
 
   const handleOpen = () => {
-    if (hasUrl) setLoading(true)
+    // Only show loading spinner if the iframe hasn't finished loading yet.
+    // The iframe stays in the DOM when closed, so onLoad won't fire again on reopen.
+    if (hasUrl && !iframeLoaded) setLoading(true)
     setIsOpen(true)
   }
 
@@ -100,7 +103,10 @@ export function StatusSidebar({ statusPageUrl }: StatusSidebarProps) {
                 <iframe
                   src={statusPageUrl}
                   title="Service Status"
-                  onLoad={() => setLoading(false)}
+                  onLoad={() => {
+                    setLoading(false)
+                    setIframeLoaded(true)
+                  }}
                   className="w-full h-full border-0"
                   loading="lazy"
                 />
