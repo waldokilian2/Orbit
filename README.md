@@ -2,7 +2,7 @@
 
 ![Orbit Dashboard](public/Screenshot.png)
 
-A beautiful, configurable self-hosted services dashboard with a glass design. Built with Next.js 15, TypeScript, and Tailwind CSS.
+A beautiful, configurable self-hosted services dashboard with a glass design. Built with Next.js 16, TypeScript, and Tailwind CSS.
 
 ## ✨ Features
 
@@ -16,6 +16,7 @@ A beautiful, configurable self-hosted services dashboard with a glass design. Bu
 - **🔄 Hot Reload** - Changes to configuration reflect immediately (after page refresh)
 - **🏷️ Service Groups** - Organize services into logical categories
 - **🔗 Quick Links** - Fast access to external resources
+- **📊 Status Sidebar** - Collapsible panel that embeds a live [Uptime Kuma](https://github.com/louislam/uptime-kuma) status page via iframe
 
 ## 🚀 Quick Start
 
@@ -93,7 +94,8 @@ Alternatively, edit the [`config/services.json`](config/services.json) file dire
     "title": "My Server Hub",
     "subtitle": "Welcome to my self-hosted services",
     "footer": "Powered by Docker",
-    "logo": ""
+    "logo": "",
+    "statusPageUrl": "http://localhost:3001/status/services"
   },
   "quickLinks": [
     { "name": "GitHub", "url": "https://github.com" },
@@ -128,6 +130,7 @@ Alternatively, edit the [`config/services.json`](config/services.json) file dire
 | `subtitle` | string | Subheading below the title |
 | `footer` | string | Text displayed in the footer |
 | `logo` | string | Optional URL to a logo image |
+| `statusPageUrl` | string | Optional URL to a status page (e.g., Uptime Kuma) for the status sidebar |
 
 #### Quick Links
 | Field | Type | Description |
@@ -187,6 +190,48 @@ Each service can have a custom accent color that affects the card styling:
 }
 ```
 
+## 📊 Status Sidebar
+
+Orbit includes a collapsible sidebar that embeds a live status page via iframe. Click the **STATUS** tab on the right edge of the dashboard to expand it.
+
+### Configuration
+
+Add a `statusPageUrl` to the `site` section of your config:
+
+```json
+{
+  "site": {
+    "title": "My Dashboard",
+    "statusPageUrl": "http://localhost:3001/status/services"
+  }
+}
+```
+
+If no URL is configured, the sidebar displays a helpful placeholder with setup instructions.
+
+### Uptime Kuma Setup
+
+The status sidebar is designed to work with [Uptime Kuma](https://github.com/louislam/uptime-kuma). By default, Uptime Kuma sends an `X-Frame-Options: SAMEORIGIN` header that blocks cross-origin iframe embedding. To allow Orbit to embed your status page, add this environment variable to your Uptime Kuma container:
+
+```bash
+# Docker
+docker run -d \
+  -e UPTIME_KUMA_DISABLE_FRAME_SAMEORIGIN=1 \
+  -p 3001:3001 \
+  louislam/uptime-kuma
+
+# Docker Compose
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma
+    ports:
+      - "3001:3001"
+    environment:
+      - UPTIME_KUMA_DISABLE_FRAME_SAMEORIGIN=1
+```
+
+> **⚠️ Note:** Disabling `X-Frame-Options` allows any site to embed your status page. For public deployments, place Orbit behind the same reverse proxy / domain as Uptime Kuma instead.
+
 ## 🌙 Dark/Light Mode
 
 - Click the toggle in the header to switch between dark and light themes
@@ -214,7 +259,8 @@ Each service can have a custom accent color that affects the card styling:
 │   │   ├── ServiceCard.tsx # Individual service card
 │   │   ├── ServiceGroup.tsx # Grouped services section
 │   │   ├── QuickLinks.tsx # Quick links bar
-│   │   └── Favorites.tsx  # Favorites section
+│   │   ├── Favorites.tsx  # Favorites section
+│   │   └── StatusSidebar.tsx # Collapsible status page sidebar
 │   ├── hooks/
 │   │   └── useTheme.ts    # Dark/light mode hook
 │   └── types/
@@ -257,4 +303,4 @@ MIT License - feel free to use this project for personal or commercial purposes.
 
 ---
 
-Built with ❤️ using Next.js 15, TypeScript, and Tailwind CSS.
+Built with ❤️ using Next.js 16, TypeScript, and Tailwind CSS.
