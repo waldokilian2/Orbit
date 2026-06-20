@@ -8,7 +8,8 @@ const defaultConfig = {
     title: "Orbit",
     subtitle: "Your self-hosted services dashboard",
     footer: "Powered by Next.js",
-    logo: ""
+    logo: "",
+    statusPageUrl: ""
   },
   quickLinks: [],
   groups: [],

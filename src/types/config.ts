@@ -26,6 +26,7 @@ export interface SiteConfig {
   subtitle: string
   footer: string
   logo?: string
+  statusPageUrl?: string
 }
 
 export interface ServicesConfig {

@@ -8,6 +8,7 @@ import { QuickLinks } from '@/components/QuickLinks'
 import { Header } from '@/components/Header'
 import { Favorites } from '@/components/Favorites'
 import { SettingsModal } from '@/components/SettingsModal'
+import { StatusSidebar } from '@/components/StatusSidebar'
 
 export default function Home() {
   const [config, setConfig] = useState<ServicesConfig | null>(null)
@@ -215,6 +216,9 @@ export default function Home() {
           setSettingsOpen(false)
         }}
       />
+
+      {/* Collapsible Status Sidebar */}
+      <StatusSidebar statusPageUrl={config.site?.statusPageUrl} />
     </div>
   )
 }
