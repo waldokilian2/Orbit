@@ -15,7 +15,8 @@ const EXAMPLE_CONFIG = `{
     "title": "My Server Hub",
     "subtitle": "Welcome to my services",
     "footer": "Powered by Docker",
-    "logo": ""
+    "logo": "",
+    "statusPageUrl": "http://localhost:3001/status/services"
   },
   "quickLinks": [
     { "name": "GitHub", "url": "https://github.com" }
@@ -202,6 +203,7 @@ function SettingsModalContent({ onClose, config, onSave }: Omit<SettingsModalPro
                   <p><code className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800">subtitle</code> - Subheading</p>
                   <p><code className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800">footer</code> - Footer text</p>
                   <p><code className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800">logo</code> - Logo URL (optional)</p>
+                  <p><code className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800">statusPageUrl</code> - Uptime Kuma status page URL (optional, powers the Status sidebar)</p>
                 </div>
               </div>
 
