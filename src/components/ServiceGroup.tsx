@@ -9,8 +9,8 @@ interface ServiceGroupProps {
   defaultExpanded?: boolean
 }
 
-export function ServiceGroup({ group, defaultExpanded = false }: ServiceGroupProps) {
-  const [isExpanded, setIsExpanded] = useState(defaultExpanded || group.services.length <= 4)
+export function ServiceGroup({ group, defaultExpanded: defaultExpandedProp = false }: ServiceGroupProps) {
+  const [isExpanded, setIsExpanded] = useState(defaultExpandedProp || group.defaultExpanded === true)
 
   return (
     <section className="glass-panel rounded-3xl overflow-hidden transition-all duration-500">

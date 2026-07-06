@@ -56,7 +56,8 @@
           "icon": "🎥",
           "color": "#734B8E"
         }
-      ]
+      ],
+      "defaultExpanded": true
     },
     {
       "name": "Productivity",
@@ -86,7 +87,8 @@
           "icon": "📷",
           "color": "#4F46E5"
         }
-      ]
+      ],
+      "defaultExpanded": true
     },
     {
       "name": "Development",
@@ -116,7 +118,8 @@
           "icon": "💻",
           "color": "#007ACC"
         }
-      ]
+      ],
+      "defaultExpanded": true
     },
     {
       "name": "Monitoring",
@@ -146,7 +149,8 @@
           "icon": "💚",
           "color": "#5CDD8B"
         }
-      ]
+      ],
+      "defaultExpanded": true
     },
     {
       "name": "Home Automation",
@@ -168,7 +172,8 @@
           "icon": "📡",
           "color": "#660066"
         }
-      ]
+      ],
+      "defaultExpanded": true
     },
     {
       "name": "Downloads",
@@ -190,7 +195,8 @@
           "icon": "📰",
           "color": "#FFA726"
         }
-      ]
+      ],
+      "defaultExpanded": true
     }
   ],
   "favorites": [
