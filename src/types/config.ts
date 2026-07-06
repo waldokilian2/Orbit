@@ -13,6 +13,7 @@ export interface ServiceGroup {
   name: string
   icon?: string
   services: Service[]
+  defaultExpanded?: boolean
 }
 
 export interface QuickLink {

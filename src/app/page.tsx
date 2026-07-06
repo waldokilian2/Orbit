@@ -186,7 +186,6 @@ export default function Home() {
                 >
                   <ServiceGroupComponent 
                     group={group}
-                    defaultExpanded={index < 2}
                   />
                 </div>
               ))
