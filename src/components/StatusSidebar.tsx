@@ -92,7 +92,7 @@ export function StatusSidebar({ statusPageUrl }: StatusSidebarProps) {
               <>
                 {/* Loading spinner */}
                 {loading && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 z-10 bg-white/30 dark:bg-gray-950/40 backdrop-blur-sm">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 z-10 bg-white/30 dark:bg-gray-950/40">
                     <div className="relative w-12 h-12">
                       <div className="absolute inset-0 rounded-full border-[3px] border-violet-300/40 dark:border-violet-500/30" />
                       <div className="absolute inset-0 rounded-full border-[3px] border-transparent border-t-violet-500 dark:border-t-violet-400 animate-spin" />
@@ -153,7 +153,7 @@ export function StatusSidebar({ statusPageUrl }: StatusSidebarProps) {
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 z-40 bg-black/20 backdrop-blur-[1px] transition-opacity duration-500"
+          className="fixed inset-0 z-40 bg-black/20 transition-opacity duration-500"
           aria-hidden="true"
         />
       )}

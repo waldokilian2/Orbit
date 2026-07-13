@@ -25,6 +25,7 @@ const EXAMPLE_CONFIG = `{
     {
       "name": "Media",
       "icon": "🎬",
+      "defaultExpanded": true,
       "services": [
         {
           "id": "plex",
@@ -121,7 +122,7 @@ function SettingsModalContent({ onClose, config, onSave }: Omit<SettingsModalPro
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" onKeyDown={handleKeyDown}>
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/40"
         onClick={onClose}
       />
       
@@ -227,6 +228,7 @@ function SettingsModalContent({ onClose, config, onSave }: Omit<SettingsModalPro
                   <p><code className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800">name</code> - Section name</p>
                   <p><code className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800">icon</code> - Emoji icon</p>
                   <p><code className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800">services</code> - Array of services</p>
+                  <p><code className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800">defaultExpanded</code> - <code className="text-blue-600 dark:text-blue-400">true</code> to render expanded on page load (optional, default: collapsed)</p>
                 </div>
               </div>
 
