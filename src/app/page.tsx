@@ -69,10 +69,10 @@ export default function Home() {
       <div className="min-h-screen bg-gradient-to-br from-violet-100 via-purple-50 to-blue-100 dark:from-gray-950 dark:via-purple-950 dark:to-blue-950">
         {/* Animated background orbs - More vibrant */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-[700px] h-[700px] bg-gradient-to-br from-violet-400/60 to-purple-500/60 dark:from-violet-600/40 dark:to-purple-600/40 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '0s' }} />
-          <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-gradient-to-br from-pink-400/50 to-rose-400/50 dark:from-pink-500/35 dark:to-rose-500/35 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '2s' }} />
-          <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-gradient-to-br from-cyan-400/50 to-blue-500/50 dark:from-cyan-600/35 dark:to-blue-600/35 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '4s' }} />
-          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-indigo-400/40 to-violet-400/40 dark:from-indigo-600/30 dark:to-violet-600/30 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '3s' }} />
+          <div className="absolute top-0 left-1/4 w-[700px] h-[700px] bg-gradient-to-br from-violet-400/60 to-purple-500/60 dark:from-violet-600/40 dark:to-purple-600/40 rounded-full blur-3xl" style={{ animationDelay: '0s' }} />
+          <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-gradient-to-br from-pink-400/50 to-rose-400/50 dark:from-pink-500/35 dark:to-rose-500/35 rounded-full blur-3xl" style={{ animationDelay: '2s' }} />
+          <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-gradient-to-br from-cyan-400/50 to-blue-500/50 dark:from-cyan-600/35 dark:to-blue-600/35 rounded-full blur-3xl" style={{ animationDelay: '4s' }} />
+          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-indigo-400/40 to-violet-400/40 dark:from-indigo-600/30 dark:to-violet-600/30 rounded-full blur-3xl" style={{ animationDelay: '3s' }} />
         </div>
 
         <div className="relative z-10 flex items-center justify-center min-h-screen">
@@ -100,7 +100,7 @@ export default function Home() {
       <div className="min-h-screen bg-gradient-to-br from-violet-100 via-purple-50 to-blue-100 dark:from-gray-950 dark:via-purple-950 dark:to-blue-950">
         {/* Animated background orbs */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-[700px] h-[700px] bg-gradient-to-br from-red-400/50 to-orange-400/50 dark:from-red-600/35 dark:to-orange-600/35 rounded-full blur-3xl animate-pulse-soft" />
+          <div className="absolute top-0 left-1/4 w-[700px] h-[700px] bg-gradient-to-br from-red-400/50 to-orange-400/50 dark:from-red-600/35 dark:to-orange-600/35 rounded-full blur-3xl" />
         </div>
 
         <div className="relative z-10 flex items-center justify-center min-h-screen p-4">
@@ -121,17 +121,17 @@ export default function Home() {
       {/* Stunning animated background - More vibrant */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {/* Primary orbs - Larger and more vibrant */}
-        <div className="absolute top-[-15%] left-[5%] w-[900px] h-[900px] bg-gradient-to-br from-violet-400/70 via-purple-400/50 to-pink-400/30 dark:from-violet-600/50 dark:via-purple-600/35 dark:to-pink-600/20 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '0s' }} />
-        <div className="absolute top-[15%] right-[-10%] w-[750px] h-[750px] bg-gradient-to-br from-pink-400/60 via-rose-400/40 to-red-400/20 dark:from-pink-600/40 dark:via-rose-600/25 dark:to-red-600/15 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-[-15%] left-[-10%] w-[1000px] h-[1000px] bg-gradient-to-br from-cyan-400/60 via-blue-400/40 to-indigo-400/20 dark:from-cyan-600/40 dark:via-blue-600/25 dark:to-indigo-600/15 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '4s' }} />
+        <div className="absolute top-[-15%] left-[5%] w-[900px] h-[900px] bg-gradient-to-br from-violet-400/70 via-purple-400/50 to-pink-400/30 dark:from-violet-600/50 dark:via-purple-600/35 dark:to-pink-600/20 rounded-full blur-3xl" style={{ animationDelay: '0s' }} />
+        <div className="absolute top-[15%] right-[-10%] w-[750px] h-[750px] bg-gradient-to-br from-pink-400/60 via-rose-400/40 to-red-400/20 dark:from-pink-600/40 dark:via-rose-600/25 dark:to-red-600/15 rounded-full blur-3xl" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-[-15%] left-[-10%] w-[1000px] h-[1000px] bg-gradient-to-br from-cyan-400/60 via-blue-400/40 to-indigo-400/20 dark:from-cyan-600/40 dark:via-blue-600/25 dark:to-indigo-600/15 rounded-full blur-3xl" style={{ animationDelay: '4s' }} />
         
         {/* Secondary orbs */}
-        <div className="absolute top-[55%] right-[15%] w-[500px] h-[500px] bg-gradient-to-br from-indigo-400/50 to-violet-400/30 dark:from-indigo-600/30 dark:to-violet-600/18 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-[25%] left-[45%] w-[400px] h-[400px] bg-gradient-to-br from-teal-400/40 to-emerald-400/25 dark:from-teal-600/25 dark:to-emerald-600/15 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-[55%] right-[15%] w-[500px] h-[500px] bg-gradient-to-br from-indigo-400/50 to-violet-400/30 dark:from-indigo-600/30 dark:to-violet-600/18 rounded-full blur-3xl" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-[25%] left-[45%] w-[400px] h-[400px] bg-gradient-to-br from-teal-400/40 to-emerald-400/25 dark:from-teal-600/25 dark:to-emerald-600/15 rounded-full blur-3xl" style={{ animationDelay: '3s' }} />
         
         {/* Tertiary smaller orbs */}
-        <div className="absolute top-[75%] left-[30%] w-[300px] h-[300px] bg-gradient-to-br from-amber-400/40 to-orange-400/25 dark:from-amber-600/20 dark:to-orange-600/12 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '2.5s' }} />
-        <div className="absolute top-[10%] left-[60%] w-[350px] h-[350px] bg-gradient-to-br from-fuchsia-400/35 to-pink-400/20 dark:from-fuchsia-600/20 dark:to-pink-600/12 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '4.5s' }} />
+        <div className="absolute top-[75%] left-[30%] w-[300px] h-[300px] bg-gradient-to-br from-amber-400/40 to-orange-400/25 dark:from-amber-600/20 dark:to-orange-600/12 rounded-full blur-3xl" style={{ animationDelay: '2.5s' }} />
+        <div className="absolute top-[10%] left-[60%] w-[350px] h-[350px] bg-gradient-to-br from-fuchsia-400/35 to-pink-400/20 dark:from-fuchsia-600/20 dark:to-pink-600/12 rounded-full blur-3xl" style={{ animationDelay: '4.5s' }} />
         
         {/* Subtle noise texture overlay */}
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.04]" style={{ 

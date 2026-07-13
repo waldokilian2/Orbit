@@ -420,17 +420,6 @@
   }
 }
 
-@keyframes pulse-soft {
-  0%, 100% {
-    opacity: 0.6;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.85;
-    transform: scale(1.08);
-  }
-}
-
 @keyframes gradient-shift {
   0% {
     background-position: 0% 50%;
@@ -467,10 +456,6 @@
 
 .animate-float {
   animation: float 8s ease-in-out infinite;
-}
-
-.animate-pulse-soft {
-  animation: pulse-soft 5s ease-in-out infinite;
 }
 
 .animate-gradient {

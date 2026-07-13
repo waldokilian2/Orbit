@@ -2,7 +2,7 @@
   "site": {
     "title": "Orbit",
     "subtitle": "Welcome to my self-hosted services",
-    "footer": "Made with ❤️ by Waldo Kilian",
+    "footer": "Made with \u2764\ufe0f by Waldo Kilian",
     "logo": ""
   },
   "quickLinks": [
@@ -22,14 +22,14 @@
   "groups": [
     {
       "name": "Media",
-      "icon": "🎬",
+      "icon": "\ud83c\udfac",
       "services": [
         {
           "id": "plex",
           "name": "Plex",
           "description": "Media server for movies and TV shows",
           "url": "http://localhost:32400",
-          "icon": "🎬",
+          "icon": "\ud83c\udfac",
           "color": "#E5A00D"
         },
         {
@@ -37,7 +37,7 @@
           "name": "Jellyfin",
           "description": "Free software media system",
           "url": "http://localhost:8096",
-          "icon": "📺",
+          "icon": "\ud83d\udcfa",
           "color": "#00A4DC"
         },
         {
@@ -45,7 +45,7 @@
           "name": "Sonarr",
           "description": "Smart TV show management",
           "url": "http://localhost:8989",
-          "icon": "📺",
+          "icon": "\ud83d\udcfa",
           "color": "#3C78A8"
         },
         {
@@ -53,7 +53,7 @@
           "name": "Radarr",
           "description": "Movie collection manager",
           "url": "http://localhost:7878",
-          "icon": "🎥",
+          "icon": "\ud83c\udfa5",
           "color": "#734B8E"
         }
       ],
@@ -61,14 +61,14 @@
     },
     {
       "name": "Productivity",
-      "icon": "⚡",
+      "icon": "\u26a1",
       "services": [
         {
           "id": "nextcloud",
           "name": "Nextcloud",
           "description": "File sync and share platform",
           "url": "http://localhost:8080",
-          "icon": "☁️",
+          "icon": "\u2601\ufe0f",
           "color": "#0082C9"
         },
         {
@@ -76,7 +76,7 @@
           "name": "Paperless-ngx",
           "description": "Document management system",
           "url": "http://localhost:8000",
-          "icon": "📄",
+          "icon": "\ud83d\udcc4",
           "color": "#17541F"
         },
         {
@@ -84,7 +84,7 @@
           "name": "Immich",
           "description": "Photo and video backup solution",
           "url": "http://localhost:2283",
-          "icon": "📷",
+          "icon": "\ud83d\udcf7",
           "color": "#4F46E5"
         }
       ],
@@ -92,14 +92,14 @@
     },
     {
       "name": "Development",
-      "icon": "💻",
+      "icon": "\ud83d\udcbb",
       "services": [
         {
           "id": "gitea",
           "name": "Gitea",
           "description": "Lightweight Git service",
           "url": "http://localhost:3000",
-          "icon": "🐙",
+          "icon": "\ud83d\udc19",
           "color": "#609926"
         },
         {
@@ -107,7 +107,7 @@
           "name": "Portainer",
           "description": "Container management platform",
           "url": "http://localhost:9000",
-          "icon": "🐳",
+          "icon": "\ud83d\udc33",
           "color": "#13BEF9"
         },
         {
@@ -115,7 +115,7 @@
           "name": "VS Code Server",
           "description": "Browser-based VS Code",
           "url": "http://localhost:8443",
-          "icon": "💻",
+          "icon": "\ud83d\udcbb",
           "color": "#007ACC"
         }
       ],
@@ -123,14 +123,14 @@
     },
     {
       "name": "Monitoring",
-      "icon": "📊",
+      "icon": "\ud83d\udcca",
       "services": [
         {
           "id": "grafana",
           "name": "Grafana",
           "description": "Analytics and monitoring platform",
           "url": "http://localhost:3001",
-          "icon": "📈",
+          "icon": "\ud83d\udcc8",
           "color": "#F46800"
         },
         {
@@ -138,7 +138,7 @@
           "name": "Prometheus",
           "description": "Monitoring and alerting toolkit",
           "url": "http://localhost:9090",
-          "icon": "🔥",
+          "icon": "\ud83d\udd25",
           "color": "#E6522C"
         },
         {
@@ -146,7 +146,7 @@
           "name": "Uptime Kuma",
           "description": "Self-hosted monitoring tool",
           "url": "http://localhost:3002",
-          "icon": "💚",
+          "icon": "\ud83d\udc9a",
           "color": "#5CDD8B"
         }
       ],
@@ -154,14 +154,14 @@
     },
     {
       "name": "Home Automation",
-      "icon": "🏠",
+      "icon": "\ud83c\udfe0",
       "services": [
         {
           "id": "homeassistant",
           "name": "Home Assistant",
           "description": "Open source home automation",
           "url": "http://localhost:8123",
-          "icon": "🏠",
+          "icon": "\ud83c\udfe0",
           "color": "#41BDF5"
         },
         {
@@ -169,7 +169,7 @@
           "name": "MQTT Broker",
           "description": "Message broker for IoT devices",
           "url": "http://localhost:1883",
-          "icon": "📡",
+          "icon": "\ud83d\udce1",
           "color": "#660066"
         }
       ],
@@ -177,14 +177,14 @@
     },
     {
       "name": "Downloads",
-      "icon": "⬇️",
+      "icon": "\u2b07\ufe0f",
       "services": [
         {
           "id": "transmission",
           "name": "Transmission",
           "description": "BitTorrent client",
           "url": "http://localhost:9091",
-          "icon": "📥",
+          "icon": "\ud83d\udce5",
           "color": "#C8E6C9"
         },
         {
@@ -192,8 +192,23 @@
           "name": "SABnzbd",
           "description": "Newsreader for Usenet",
           "url": "http://localhost:8085",
-          "icon": "📰",
+          "icon": "\ud83d\udcf0",
           "color": "#FFA726"
+        }
+      ],
+      "defaultExpanded": true
+    },
+    {
+      "name": "Infrastructure",
+      "icon": "\ud83d\udd27",
+      "services": [
+        {
+          "id": "searxng",
+          "name": "SearXNG",
+          "description": "Self-hosted meta search engine (Hermes backend)",
+          "url": "http://192.168.3.96:8888",
+          "icon": "\ud83d\udd0d",
+          "color": "#3050F0"
         }
       ],
       "defaultExpanded": true
